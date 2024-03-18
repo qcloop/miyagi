@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GBB.Miyagi.RecommendationSe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sk-copilot-chat-api", "sk-copilot-chat-api", "{16657138-8CA1-4BFA-A96C-FD05697CF32C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopilotChatWebApi", "services\sk-copilot-chat-api\dotnet\CopilotChatWebApi.csproj", "{7EF44F14-C077-4876-947A-33CC43397722}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopilotChatWebApi", "services\sk-copilot-chat-api\dotnet\webapi\CopilotChatWebApi.csproj", "{7EF44F14-C077-4876-947A-33CC43397722}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "chatgpt-plugin", "chatgpt-plugin", "{9BE5EAFF-9A28-4FBC-B719-B248F97E2A50}"
 EndProject
