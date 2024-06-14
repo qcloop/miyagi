@@ -28,9 +28,14 @@ export function ChatSessionList({ className, setSelectedSession: updateSelectedS
 
             // Set the first session as selected
             if (data.length > 0) {
-                const firstChatSession = data[0];
-                setSelectedSession(firstChatSession);
-                await fetchChatMessages(firstChatSession.id);
+                const randomIndex = Math.floor(Math.random() * data.length);
+                const randomChatSession = data[randomIndex];
+                setSelectedSession(randomChatSession);
+                await fetchChatMessages(randomChatSession.id);
+                setUserInfoAtom((prevUserInfo: UserInfoProps) => ({
+                    ...prevUserInfo,
+                    chatId: randomChatSession.id,
+                }));
             }
         }
         fetchChatSessions().then(r => console.log(r));
@@ -46,7 +51,7 @@ export function ChatSessionList({ className, setSelectedSession: updateSelectedS
             }
         });
         const data = await response.json();
-        setChatsAtom(data as ChatProps[]);
+        setChatsAtom(data.reverse() as ChatProps[]);
     }
 
     // New handler for Listbox onChange event
